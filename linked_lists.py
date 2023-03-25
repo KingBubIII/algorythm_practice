@@ -55,7 +55,18 @@ class LinkedList:
         self.length -= 1
         return
     
+    def reverse(self):
+        currNode = self.head
+        prevNode = None
+        while self.tail["next"] == None:
+            tempNode = currNode["next"]
+            currNode["next"] = prevNode
 
+            prevNode = currNode
+            currNode = tempNode
+        tempNode = self.head
+        self.head = self.tail
+        self.tail = tempNode
 
 myll = LinkedList(10)
 
@@ -63,6 +74,9 @@ myll.append(5)
 myll.append(16)
 myll.prepend(1)
 myll.insert(2,99)
-myll.remove(2)
-myll.remove(3)
+# myll.remove(2)
+# myll.remove(3)
+myll.reverse()
+myll.printList()
+myll.reverse()
 myll.printList()
