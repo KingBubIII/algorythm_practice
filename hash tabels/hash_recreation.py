@@ -26,8 +26,18 @@ class HashTable:
                     return currentBucket[i][1]
         return None;
 
-myHashTable = HashTable(2);
+    def keys(self):
+        keys_arr = []
+        for index in range(len(self.data)):
+            curr_data = self.data[index]
+            if (curr_data is not None):
+                keys_arr.append(self.data[index][0][0])
+        print(keys_arr)
+        return keys_arr
+
+myHashTable = HashTable(50);
 myHashTable.set('grapes', 10000)
 print(myHashTable.get('grapes'))
 myHashTable.set('apples', 9)
 print(myHashTable.get('apples'))
+myHashTable.keys()
