@@ -2,7 +2,7 @@ class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
         word1_len = len(word1)
         word2_len = len(word2)
-        merged = '{}'.join(word1)
+        merged = '{}'.join(word1) # O(n)
         if word2_len > word1_len or word1_len == word2_len:
             merged += "{}"*(word2_len-word1_len+1)
         else:
