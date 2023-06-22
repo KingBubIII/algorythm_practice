@@ -1,6 +1,8 @@
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
 # my first attempt
+# time complexity lines up correctly
+# space complexity is O(N) instead of O(1)
 def insertionSort1(array):
     sorted_amt = 1
     for i in range(1,len(array)):
@@ -17,5 +19,20 @@ def insertionSort1(array):
         array[:sorted_amt+1] = temp_nums
         sorted_amt += 1
 
-insertionSort1(numbers)
-print(numbers)
+# Google-d answer
+def insertionSort2(array):
+    for index in range(1,len(array)):
+
+        currentvalue = array[index]
+        position = index
+
+        while position>0 and array[position-1]>currentvalue:
+            array[position]=array[position-1]
+            position = position-1
+
+        array[position]=currentvalue
+    
+    return array
+
+result = insertionSort2(numbers)
+print(result)
