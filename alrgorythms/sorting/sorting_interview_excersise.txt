@@ -1,0 +1,33 @@
+//#1 - Sort 10 schools around your house by distance:
+    insertion sort
+    Why?
+        fast on small sorts
+        space complexity O(1)
+        easy to code
+
+//#2 - eBay sorts listings by the current Bid amount:
+    radix or counting sort
+    why?
+        numbers (integers) that need to be sorted within a range
+
+//#3 - Sport scores on ESPN
+    quick sort
+    why?
+
+//#4 - Massive database (can't fit all into memory) needs to sort through past year's user data
+    merge sort
+    why?
+    data is big, therefore optimize for worst case bigO
+//#5 - Almost sorted Udemy review data needs to update and add 2 new reviews
+    insertion sort
+    why?
+        mostly preordered list is assumed here 
+//#6 - Temperature Records for the past 50 years in Canada
+    radix counting sort - with integer values
+    or 
+    quick sort - with decimal values
+//#7 - Large user name database needs to be sorted. Data is very random.
+    merge sort - if enough memory available
+    quick sort - if a good pivot value is picked for better memory space 
+//#8 - You want to teach sorting for the first time
+    bubble sort or selection sort
